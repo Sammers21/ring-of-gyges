@@ -1,26 +1,31 @@
-# bun starter
+# Ring of Gyges
 
-## Getting Started
+Ring of Gyges is a library combining existing methods of browser fingerprinting to achieve the highest possible accuracy.
 
-Click the [Use this template](https://github.com/wobsoriano/bun-lib-starter/generate) button to create a new repository with the contents starter.
 
-OR
+# Usage
 
-Run `bun create wobsoriano/bun-lib-starter ./my-lib`.
+The CDN Script
 
-## Setup
+```<script src="https:...."></script>```
 
-```bash
-# install dependencies
-bun install
+or NPM install:
 
-# test the app
-bun test
+```npm i ring-of-gyges```
 
-# build the app, available under dist
-bun run build
+Create the Ring of Gyges ID:
+
+```javascript
+import { identity } from "ring-of-gyges";
 ```
 
-## License
+```javascript
+identity().then((result) => {
+  console.log("ring-of-gyges ID: ", result.id);
+  console.log("Parts its build based on", result.parts);
+});
+```
 
-MIT
+## Lore
+
+In Greek mythology, the Ring of Gyges was a magical ring that granted its wearer the power of invisibility. This ring could be used to track or identify individuals without being seen, as the wearer could move about unseen while observing others
